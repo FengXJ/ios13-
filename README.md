@@ -30,4 +30,5 @@ NSInteger numberOfBeforeSection = [_update[@"oldModel"] numberOfItemsInSection:u
 vc.modalPresentationStyle = 0可解决
 
 6.设置不兼容深色模式
-info.plist文件里添加   User Interface Style   Light 
+info.plist文件里添加   User Interface Style   Light （上传ipa的时候被拒绝了）
+目前在baseviewcontroller里用 if (@available(iOS 13.0, *)){ self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight; }
