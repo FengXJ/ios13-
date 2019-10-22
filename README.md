@@ -32,3 +32,10 @@ vc.modalPresentationStyle = 0可解决
 6.设置不兼容深色模式
 info.plist文件里添加   User Interface Style   Light （上传ipa的时候被拒绝了）
 目前在baseviewcontroller里用 if (@available(iOS 13.0, *)){ self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight; }
+
+7.Xcode11新项目黑屏
+新增了Scenedelegate.h
+不需要适配ipad的话:
+（1）删除Scenedelegate.h和Scenedelegate.m
+（2）删掉appdelegate的 UISceneSession lifecycle后面的2段代码
+（3）删除掉info.plist中Application Scene Manifest
